@@ -1,8 +1,15 @@
 /*												Main page - Nav											*/
-
+:root {
+	--main-color: #6c6;
+}
 nav h1.d-inline {
 	font-family: 'Nunito', sans-serif;
 	font-weight: bold;
+	color: var(--main-color);
+}
+
+nav#main-nav ul.navbar-nav a.nav-link:hover {
+	color: var(--main-color);
 }
 
 nav form.form-inline input.form-control {
@@ -20,6 +27,7 @@ nav form.form-inline button.btn {
 
 /*												Main page - Sections										*/
 
-section#mainSection .popular {
-	border-right: 1px solid #ccc;
+section#mainSection article .row{
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
