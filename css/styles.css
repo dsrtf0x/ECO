@@ -1,0 +1,25 @@
+/*												Main page - Nav											*/
+
+nav h1.d-inline {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+}
+
+nav form.form-inline input.form-control {
+	width: 150px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+nav form.form-inline button.btn {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+/*												Main page - Sections										*/
+
+section#mainSection .popular {
+	border-right: 1px solid #ccc;
+}
