@@ -36,6 +36,59 @@ section#mainSection article .row{
 	border-radius: 5px;
 }
 
+#mainSection td{
+	position: relative;
+	z-index: 1;
+}
+
+#mainSection tr:nth-child(odd):hover {
+	color: white;
+	transition: 0.2s;
+}
+
+#mainSection td:before {
+	content: '';
+	color: var(--main-color);
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: var(--main-color);
+	transition: .5s;
+}
+
+#mainSection tr:nth-child(odd):hover td:before {
+	width: 100%;
+}
+
+#mainSection tr:nth-child(even):hover {
+	color: white;
+	transition: 0.2s;
+}
+
+#mainSection td:after {
+	content: '';
+	color: var(--main-color);
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	background: var(--main-color);
+	transition: .5s;
+}
+
+#mainSection tr:nth-child(even):hover td:after {
+	width: 100%;
+}
+
+#mainSection table.table-striped th:hover {
+	color: black;
+}
+
 @media (max-width: 768px) {
 	#loginSection div.modal-footer input.btn, #signupSection div.modal-footer input.btn{
 		display: block;
