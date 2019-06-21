@@ -50,8 +50,8 @@
 							<i class="fas fa-user text-white pl-3"></i>
 						</a>
 						<div class="dropdown-menu">
-							<a href="" class="dropdown-item d-flex" id="loginButton" data-toggle="modal" data-target="#loginSection">Log in<i class="fas fa-sign-in-alt ml-auto"></i></a>
-							<a href="" class="dropdown-item d-flex" id="signupButton" data-toggle="modal" data-target="#signupSection">Sign up<i class="fas fa-user-plus ml-auto"></i></a>
+							<button class="dropdown-item d-flex" id="loginButton" data-toggle="modal" data-target="#loginSection">Log in<i class="fas fa-sign-in-alt ml-auto"></i></button>
+							<button class="dropdown-item d-flex" id="signupButton" data-toggle="modal" data-target="#signupSection">Sign up<i class="fas fa-user-plus ml-auto"></i></button>
 						</div>
 					</li>
 				</ol>
@@ -59,15 +59,17 @@
 		</div>
 	</nav>
 
-	<section id="loginSection" class="modal fade">
+	<!-- Modal window ***Log In*** -->
+
+	<section id="loginSection" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 mx-auto">
-					<div class="card">
-						<div class="card-header">
-							<h3 class="text-center">Authorization</h3>
+				<div class="col-md-6 mx-auto modal-dialog">
+					<div class="card modal-content">
+						<div class="card-header modal-header">
+							<h3 class="text-center modal-title">Authorization</h3>
 						</div>
-						<div class="card-body">
+						<div class="card-body modal-body">
 							<form>
 								<div class="form-group">
 									<label for="email">Login</label>
@@ -75,13 +77,16 @@
 								</div>
 								<div class="form-group">
 									<label for="password">Password</label>
-									<input type="email" class="form-control" placeholder="Enter your password">
+									<input type="password" class="form-control" placeholder="Enter your password">
 								</div>
 								<div class="form-group">
 									<input type="checkbox" id="login-checkbox">
 									<label for="login-checkbox">Remember me</label>
 								</div>
-								<input type="submit" class="btn btn-success mx-auto btn-block w-50">
+								<div class="d-flex justify-content-between modal-footer">
+									<input type="submit" class="btn btn-success d-inline-block w-25">
+									<button id="closeLogin" class="btn btn-danger d-inline-block w-25" data-dismiss="modal">Close</button>
+								</div>
 							</form>
 						</div>
 					</div>
@@ -90,15 +95,17 @@
 		</div>
 	</section>
 
-	<section id="signupSection" class="modal fade">
+	<!-- Modal window ***Sign up*** -->
+
+	<section id="signupSection" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 mx-auto">
-					<div class="card">
-						<div class="card-header">
-							<h3 class="text-center">Join us</h3>
+				<div class="col-md-6 mx-auto modal-dialog">
+					<div class="card modal-content">
+						<div class="card-header modal-header">
+							<h3 class="text-center modal-title">Join us</h3>
 						</div>
-						<div class="card-body">
+						<div class="card-body modal-body">
 							<form>
 								<div class="form-group">
 									<label for="name">Name</label>
@@ -114,9 +121,12 @@
 								</div>
 								<div class="form-group">
 									<label for="password">Password</label>
-									<input type="email" class="form-control" placeholder="Enter your password">
+									<input type="password" class="form-control" placeholder="Enter your password">
 								</div>
-								<input type="submit" class="btn btn-success mx-auto btn-block w-50">
+								<div class="d-flex justify-content-between modal-footer">
+									<input type="submit" class="btn btn-success d-inline-block w-25">
+									<button id="closeSignup" class="btn btn-danger d-inline-block w-25" data-dismiss="modal">Close</button>
+								</div>
 							</form>
 						</div>
 					</div>
@@ -130,6 +140,9 @@
 	<section id="mainSection">
 		<div class="container-fluid">
 			<div class="row">
+
+				<!-- Left aside -->
+
 				<div class="col-md-3 mt-3">
 					<div class="card mt-2">
 							<img src="https://source.unsplash.com/random/300x200" class="card-img-top" alt="">
@@ -150,6 +163,9 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Middle part -->
+
 				<article class="col-md-6 mt-3">
 					<div class="row py-3">
 						<div class="col-md-5">
@@ -193,30 +209,81 @@
 						</div>
 					</div>
 				</article>
-				<div class="col-md-3 mt-3">
+				<!-- Right aside -->
+
+				<aside class="col-md-3 mt-3">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Lorem ipsum dolor sit amet.</h4>
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid libero culpa soluta cum veniam error sapiente neque exercitationem fuga assumenda facere aspernatur sit, aliquam recusandae.</p>
-								</div>
-								<img src="https://source.unsplash.com/random/280x180" class="card-img-bottom" alt="">
-							</div>
+							<table class="table table-bordered">
+								<thead class="thead-dark">
+									<tr>
+										<th class="text-center">Top rated</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="bg-light">Article title one</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title two</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title three</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title four</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title five</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title six</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title seven</td>
+									</tr>
+									<tr>
+										<td class="bg-light">Article title eight</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 					<div class="row mt-3">
 						<div class="col-md-12">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Lorem ipsum dolor sit amet.</h4>
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid libero culpa soluta cum veniam error sapiente neque exercitationem fuga assumenda facere aspernatur sit, aliquam recusandae.</p>
-								</div>
-								<img src="https://source.unsplash.com/random/280x179" class="card-img-bottom" alt="">
-							</div>
+							<table class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th class="text-center">Your favourites</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Article title one</td>
+									</tr>
+									<tr>
+										<td>Article title two</td>
+									</tr>
+									<tr>
+										<td>Article title three</td>
+									</tr>
+									<tr>
+										<td>Article title four</td>
+									</tr>
+									<tr>
+										<td>Article title five</td>
+									</tr>
+									<tr>
+										<td>Article title six</td>
+									</tr>
+									<tr>
+										<td>Article title seven</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
-				</div>
+				</aside>
 			</div>
 		</div>
 	</section>
