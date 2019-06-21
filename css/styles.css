@@ -8,7 +8,11 @@ nav h1.d-inline {
 	color: var(--main-color);
 }
 
-nav#main-nav ul.navbar-nav a.nav-link:hover {
+nav#main-nav a.nav-link:hover {
+	color: var(--main-color);
+}
+
+.fa-user:hover:before  {
 	color: var(--main-color);
 }
 
@@ -30,4 +34,19 @@ nav form.form-inline button.btn {
 section#mainSection article .row{
 	border: 1px solid #ccc;
 	border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+	#loginSection div.modal-footer input.btn, #signupSection div.modal-footer input.btn{
+		display: block;
+		min-width: 100%;
+	}
+	#loginSection div.modal-footer button#closeLogin, #signupSection div.modal-footer button#closeSignup {
+		display: block;
+		min-width: 100%;
+		margin-left: 0px;
+	}
+	#loginSection div.modal-footer, #signupSection div.modal-footer {
+		display: block !important;
+	}
 }
