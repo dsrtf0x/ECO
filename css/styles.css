@@ -40,6 +40,7 @@ section#mainSection article .row{
 	#loginSection div.modal-footer input.btn, #signupSection div.modal-footer input.btn{
 		display: block;
 		min-width: 100%;
+		margin-bottom: 10px;
 	}
 	#loginSection div.modal-footer button#closeLogin, #signupSection div.modal-footer button#closeSignup {
 		display: block;
