@@ -1,3 +1,127 @@
+<<<<<<< HEAD
+/*												Main page - Nav											*/
+:root {
+	--main-color: #6c6;
+}
+nav h1.d-inline {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	color: var(--main-color);
+}
+
+nav#main-nav a.nav-link:hover {
+	color: var(--main-color);
+}
+
+.fa-user:hover:before  {
+	color: var(--main-color);
+}
+
+nav form.form-inline input.form-control {
+	width: 150px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+nav form.form-inline button.btn {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+/*												Main page - Sections										*/
+
+section#mainSection article .row{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#mainSection td{
+	position: relative;
+	z-index: 1;
+}
+
+#mainSection tr:nth-child(odd):hover {
+	color: white;
+	transition: 0.2s;
+}
+
+#mainSection td:before {
+	content: '';
+	color: var(--main-color);
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: var(--main-color);
+	transition: .5s;
+	opacity: 0;
+}
+
+#mainSection tr:nth-child(odd):hover td:before {
+	width: 100%;
+	opacity: 1;
+}
+
+#mainSection tr:nth-child(even):hover {
+	color: white;
+	transition: 0.2s;
+}
+
+#mainSection td:after {
+	content: '';
+	color: var(--main-color);
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	background: var(--main-color);
+	transition: .5s;
+	opacity: 0;
+}
+
+#mainSection tr:nth-child(even):hover td:after {
+	width: 100%;
+	opacity: 1;
+}
+
+#mainSection table.table-striped th:hover {
+	color: black;
+}
+
+.b-description_readmore_button {
+	display: block;
+	width: 150px;
+	border: 1px solid black;
+	padding: 10px 0;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+}
+
+/*												Media queries										*/
+
+@media (max-width: 768px) {
+	#loginSection div.modal-footer input.btn, #signupSection div.modal-footer input.btn{
+		display: block;
+		min-width: 100%;
+		margin-bottom: 10px;
+	}
+	#loginSection div.modal-footer button#closeLogin, #signupSection div.modal-footer button#closeSignup {
+		display: block;
+		min-width: 100%;
+		margin-left: 0px;
+	}
+	#loginSection div.modal-footer, #signupSection div.modal-footer {
+		display: block !important;
+	}
+}
+=======
 /*												Main page - Nav											*/
 :root {
 	--main-color: #6c6;
@@ -104,3 +228,4 @@ section#mainSection article .row{
 		display: block !important;
 	}
 }
+>>>>>>> a248f8b80d6781f019d02a06a5b58d586d7d0e4a
